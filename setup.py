@@ -27,6 +27,6 @@ setup(
         ]
     },
     install_requires=[      # Uppdatera med nya libraries/moduler som krävs
-         
+         'pyodbc',
       ],
 )
