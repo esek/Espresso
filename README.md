@@ -8,6 +8,11 @@ Genom att gå in på sin användarsidan på eee.esek.se kan man "claima" ett kor
 
 Allt är kodat i Python, förutom där det inte behövs.
 
+## Databasen
+Databasen består av två tabeller i sektionens MySQL-databas: En för att spara alla koppar som registrerats, och en för att koppla användare och deras kort-id (om de gör så via hemsidan).
+
+Tabellen för kaffekoppar har en rad för varje kopp med strukturen `CARD_ID, DATE, TIME`.
+
 ## Filer och program
 
 Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`. Här finns `__main__.py` också.
@@ -16,7 +21,7 @@ Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`. Här f
 * Buffer och hantering av totalt antal koppar kaffe i `cupcounter.py`.
 * Kommunikation med databas och struktur på queries i `datahandler.py`
 * Versionsnummer, requirements etc. finns i `setup.py`.
-* Lösenord, servernamn etc. som används av `datahandler.py` finns under en mapp `secrets` i samma fil som `setup.py`. Denna finns listad i .gitignore. Denna listan innehåller, rad för rad, följande info (i ordning): Driver, server, databas, användar-id och tillhörande lösenord.
+* Lösenord, servernamn etc. som används av `datahandler.py` finns under en mapp `secrets` i samma fil som `setup.py`. Denna finns listad i .gitignore. Denna listan innehåller, rad för rad, följande info (i ordning): Driver, server, databas, användar-id och tillhörande lösenord samt table.
 
 ### datahandler.py
 `datahandler.py` använder `pyodbc` (https://github.com/mkleehammer/pyodbc/wiki) för att connecta till SQL-databasen och utföra queries. Utför även kontroll om användare finns sedan tidigare eller ej, och den enda delen som direkt har kontakt med databasen.
