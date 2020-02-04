@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
-    long_descritiption = fh.read()
+    long_description = fh.read()
 
 setup(
     name='espresso',
@@ -15,18 +15,18 @@ setup(
         'Jonathan Benitez',
         'Emil Jonathan Eriksson',
     ],
-    author_email='macapar@esek.se',
+    author_email='macapar@esek.se',     # Well isch
     description='The best damn coffee-counter there ever was',
-    long_description=long_descritiption,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/esek/espresso",
     packages=find_packages(),
-    entry_points={  # Tells pipx what to do
+    entry_points={  # Detta avgör vad som kör programmet när det installerats av pip. typ.
         "console_scripts": [
-            "espresso=espresso.__main__:main"   # Must be underscore
+            "espresso=espresso.__main__:main"   # Ändra om strukturen ändras så att __main__ inte är huvudfil.
         ]
     },
     install_requires=[      # Uppdatera med nya libraries/moduler som krävs
-         'pyodbc',
+         'pyodbc',  # För hantering av SQL
       ],
 )
