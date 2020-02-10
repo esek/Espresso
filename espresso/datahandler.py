@@ -2,7 +2,7 @@ import pyodbc
 import datetime
 
 # Importerar våra lösenord, servernamn m.m.
-with open("../secrets/secrets.txt", "r") as sf: # Läser in vår fil med hemligheter
+with open("./secrets/secrets.txt", "r") as sf: # Läser in vår fil med hemligheter
     driver = sf.read(0)     # Läser texten en rad i taget
     server = sf.read(1)
     database = sf.read(2)
