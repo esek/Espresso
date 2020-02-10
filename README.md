@@ -29,4 +29,4 @@ Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`. Här f
 
 ### datahandler.py
 
-`datahandler.py` använder `pyodbc` (https://github.com/mkleehammer/pyodbc/wiki) för att connecta till SQL-databasen och utföra queries. Utför även kontroll om användare finns sedan tidigare eller ej, och den enda delen som direkt har kontakt med databasen.
+`datahandler.py` använder `pyodbc` (<https://github.com/mkleehammer/pyodbc/wiki>) för att connecta till SQL-databasen och utföra queries. Utför även kontroll om användare finns sedan tidigare eller ej, och den enda delen som direkt har kontakt med databasen.
