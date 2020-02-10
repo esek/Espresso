@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='espresso',
-    version='0.0.1',
+    version='0.0.1a', # Uppdatera innan push
     author=[
         'Ludvig Liftig',
         'Tom Andersson',

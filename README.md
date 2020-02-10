@@ -1,5 +1,9 @@
 # Espresso
 
+## Requirements
+
+Du behöver en C++-compiler för att kunna hantera databasen. Installera en, annars kommer du få `Import error` i `datahandler.py`.
+
 ## Struktur
 
 En NFC-läsare läser av LU-kortet, och visar kortets unika ID på en display. Därefter läggs tiden och datum koppen kaffe blippades till i dagens totala kaffeanvändning och en query i en buffert. Efter ett visst tidsintervall skickas tid och datum samt kort-id till ett table i sektionens SQL-databas.
