@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Du behöver en C++-compiler för att kunna hantera databasen. Installera en, annars kommer du få `Import error` i `datahandler.py`.
+Du behöver en C++-compiler för att kunna hantera databasen. Installera en, annars kommer du få `Import error` i `datahandler.py`. För Windows innebär detta (tyvärr) att du måste installera Visual Studio.
 
 ## Struktur
 
