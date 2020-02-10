@@ -13,9 +13,10 @@ Genom att gå in på sin användarsidan på eee.esek.se kan man "claima" ett kor
 Allt är kodat i Python, förutom där det inte behövs.
 
 ## Databasen
+
 Databasen består av två tabeller i sektionens MySQL-databas: En för att spara alla koppar som registrerats, och en för att koppla användare och deras kort-id (om de gör så via hemsidan).
 
-Tabellen för kaffekoppar har en rad för varje kopp med strukturen `CARD_ID, DATE, TIME`.
+Tabellen för kaffekoppar har en rad för varje kopp med strukturen `CARD_ID, TIMESTAMP`.
 
 ## Filer och program
 

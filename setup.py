@@ -24,7 +24,6 @@ setup(
     entry_points={  # Detta avgör vad som kör programmet när det installerats av pip. typ.
         "console_scripts": [
             "espresso = espresso.espresso:main",   # Pekar så att när vi installerat programmet via pip så körs main() i espresso.py om vi skriver espresso i terminalen "Vi har ett script espresso som kör main-metoden i espresso.py i espresso"
-
         ]
     },
     install_requires=[      # Uppdatera med nya libraries/moduler som krävs
