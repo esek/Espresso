@@ -12,6 +12,8 @@ Genom att gå in på sin användarsidan på eee.esek.se kan man "claima" ett kor
 
 Allt är kodat i Python, förutom där det inte behövs.
 
+För att ha en lokal backup sparas alla datums totala kaffekonsumtion i filen `backup.txt` i mappen `data`.
+
 ## Databasen
 
 Databasen består av två tabeller i sektionens MySQL-databas: En för att spara alla koppar som registrerats, och en för att koppla användare och deras kort-id (om de gör så via hemsidan).
@@ -20,7 +22,7 @@ Tabellen för kaffekoppar har en rad för varje kopp med strukturen `CARD_ID, TI
 
 ## Filer och program
 
-Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`. Här finns `__main__.py` också.
+Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`.
 
 * NFC-hantering i `nfchandler.py`
 * "Main-metoden" finns i `espresso.py`. Setup.py pekar på denna fil så att när man kallar espresso i terminalen efter installation körs denna fil.
