@@ -18,7 +18,7 @@ Tabellen för kaffekoppar har en rad för varje kopp med strukturen `CARD_ID, DA
 Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`. Här finns `__main__.py` också.
 
 * NFC-hantering i `nfchandler.py`
-* Buffer och hantering av totalt antal koppar kaffe i `cupcounter.py`.
+* "Main-metoden" finns i `espresso.py`. Setup.py pekar på denna fil så att när man kallar espresso i terminalen efter installation körs denna fil.
 * Kommunikation med databas och struktur på queries i `datahandler.py`
 * Versionsnummer, requirements etc. finns i `setup.py`. Detta är även vad som används för att installera programmet m.h.a. pip. För att installera, använd `pip install .` i filens sökväg.
 * Lösenord, servernamn etc. som används av `datahandler.py` finns under en mapp `secrets` i samma fil som `setup.py`. Denna finns listad i .gitignore. Denna listan innehåller, rad för rad, följande info (i ordning): Driver, server, databas, användar-id och tillhörande lösenord samt table.

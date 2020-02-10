@@ -23,7 +23,8 @@ setup(
     packages=find_packages(),
     entry_points={  # Detta avgör vad som kör programmet när det installerats av pip. typ.
         "console_scripts": [
-            "espresso=espresso.__main__:main"   # Ändra om strukturen ändras så att __main__ inte är huvudfil.
+            "espresso = espresso.espresso:main",   # Pekar så att när vi installerat programmet via pip så körs main() i espresso.py om vi skriver espresso i terminalen "Vi har ett script espresso som kör main-metoden i espresso.py i espresso"
+
         ]
     },
     install_requires=[      # Uppdatera med nya libraries/moduler som krävs
