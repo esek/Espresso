@@ -13,7 +13,7 @@ def add_local_cup(date=datetime.datetime.now()):
     """Backup för hur många koppar kaffe som druckits, 
     noterar i lokal .txt-fil
     """
-    date_string = date.strftime('%Y/%m/%d')
+    date_string = date.strftime('%Y-%m-%d')
 
     with open("./data/backup.txt", "r+") as bu:     # r+ ANNARS FLIPPAR DEN UT
         """Vi kollar om sista raden är dagens datum, 
