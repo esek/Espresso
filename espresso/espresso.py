@@ -1,13 +1,30 @@
 #!/usr/bin/env python
 import espresso.datahandler as dh
 import espresso.nfchandler as nfc
+import espresso.mail as mail
 import datetime
+import time
 
 # Om denna filen körs direkt, gör detta. Om denna fil modul importeras görs ingetd
 def main():
     """Denna metod körs då 'espresso' körs i kommandotolken.
     """
-    pass
+    try: 
+        while True:
+        """ Detta är huvudloopen. Körs hela tiden.
+        """
+        read_cups = ncf.read()  # Läser in från läsaren
+        add_cups(read_cups)
+        if mail.is_time_to_send_mail(time.time()):
+            # Lägg till inläsning av JSON
+            mail.send_mail(json_file)
+    except Exception e:     # Bara starta
+        print(str(e))
+        main()
+
+def add_cups(read_cup):
+    """ Lägger till inlästa koppar
+    """
 
 def add_local_cup(date=datetime.datetime.now()):
     """Backup för hur många koppar kaffe som druckits, 
@@ -32,7 +49,6 @@ def add_local_cup(date=datetime.datetime.now()):
                 last_line_list = last_line.split()
                 new_number = int(last_line_list[-1]) + 1   # Nya nummret är ordet längst till höger på sista raden + 1
                 last_line_list[-1] = " " + str(new_number)   # Skapar en ny sista rad med nya antalet kaffe
-                print(last_line_list)
                 new_last_line = "".join(last_line_list)
                 line_list[-1] = new_last_line   # Lägger in nya sista raden bland alla rader
             else:
