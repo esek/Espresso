@@ -2,11 +2,11 @@
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
-    long_descritiption = fh.read()
+    long_description = fh.read()
 
 setup(
     name='espresso',
-    version='0.0.1',
+    version='0.0.1a', # Uppdatera innan push
     author=[
         'Ludvig Liftig',
         'Tom Andersson',
@@ -15,18 +15,18 @@ setup(
         'Jonathan Benitez',
         'Emil Jonathan Eriksson',
     ],
-    author_email='macapar@esek.se',
+    author_email='macapar@esek.se',     # Well isch
     description='The best damn coffee-counter there ever was',
-    long_description=long_descritiption,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/esek/espresso",
     packages=find_packages(),
-    entry_points={  # Tells pipx what to do
+    entry_points={  # Detta avgör vad som kör programmet när det installerats av pip. typ.
         "console_scripts": [
-            "espresso=espresso.__main__:main"   # Must be underscore
+            "espresso = espresso.espresso:main",   # Pekar så att när vi installerat programmet via pip så körs main() i espresso.py om vi skriver espresso i terminalen "Vi har ett script espresso som kör main-metoden i espresso.py i espresso"
         ]
     },
     install_requires=[      # Uppdatera med nya libraries/moduler som krävs
-         'pyodbc',
+         'pyodbc',  # För hantering av SQL
       ],
 )
