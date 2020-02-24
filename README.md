@@ -14,6 +14,10 @@ Allt är kodat i Python, förutom där det inte behövs.
 
 För att ha en lokal backup sparas alla datums totala kaffekonsumtion i filen `backup.txt` i mappen `data`.
 
+## Mail till Cafémästaren
+
+Då variabeln timestamp_since_last_mail, som sparas i en .txt i `/data/mail_timestamp.txt` är över en vecka bort (vi mäter enligt UNIX Epoch), så skickas ett mail till Cafémästaren och timestampet uppdateras. I mailet skickas en Excel-fil med senaste 7 dagarnas kaffe.
+
 ## Databasen
 
 Databasen består av två tabeller i sektionens MySQL-databas: En för att spara alla koppar som registrerats, och en för att koppla användare och deras kort-id (om de gör så via hemsidan).
@@ -28,6 +32,7 @@ Prelimenär updelning av kod. Samtlig kod finns i undermappen `espresso`.
 * "Main-metoden" finns i `espresso.py`. Setup.py pekar på denna fil så att när man kallar espresso i terminalen efter installation körs denna fil.
 * Kommunikation med databas och struktur på queries i `datahandler.py`
 * Versionsnummer, requirements etc. finns i `setup.py`. Detta är även vad som används för att installera programmet m.h.a. pip. För att installera, använd `pip install .` i filens sökväg.
+* I mail.py finns all hantering av mail som ska skickas till Cafémästaren
 * Lösenord, servernamn etc. som används av `datahandler.py` finns under en mapp `secrets` i samma fil som `setup.py`. Denna finns listad i .gitignore. Denna listan innehåller, rad för rad, följande info (i ordning): Driver, server, databas, användar-id och tillhörande lösenord samt table.
 
 ### datahandler.py
