@@ -3,6 +3,7 @@ import espresso.datahandler as dh
 import espresso.nfchandler as nfc
 import espresso.mail as mail
 import datetime
+import time
 
 # Om denna filen körs direkt, gör detta. Om denna fil modul importeras görs ingetd
 def main():
@@ -14,7 +15,7 @@ def main():
         """
         read_cups = ncf.read()  # Läser in från läsaren
         add_cups(read_cups)
-        if mail.is_time_to_send_mail():
+        if mail.is_time_to_send_mail(time.time()):
             # Lägg till inläsning av JSON
             mail.send_mail(json_file)
     except Exception e:     # Bara starta
